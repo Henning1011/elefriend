@@ -4,6 +4,6 @@ class Booking < ApplicationRecord
 
   validates :date, presence: true
   validates :message, presence: true
-  validates :message, length: { minimum: 6, too_short: `is too short (minimum is %{count} characters)` }
+  validates :message, length: { minimum: 6 }
   validates_uniqueness_of :pet_id, :scope => [:date]
 end
