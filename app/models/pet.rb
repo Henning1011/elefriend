@@ -3,5 +3,5 @@ class Pet < ApplicationRecord
   has_many :bookings
 
   validates :name, :title, :description, :price, :category, :species, :location, presence: true
-  validates :title, length: { minimum: 10 }
+  validates :title, length: { minimum: 10, too_short: `is too short (minimum is %{count} characters)` }
 end
