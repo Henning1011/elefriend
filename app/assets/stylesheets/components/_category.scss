@@ -1,0 +1,33 @@
+.category-icons {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  gap: 20px;
+  margin-top: 5px;
+
+}
+
+.category-icons li {
+  font-size: 40px;
+  text-decoration: none;
+}
+
+
+.category-icons li i {
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  border-radius: 50%;
+  margin: 5px;
+}
+
+.category-icons li:hover i {
+  background-color: lightblue;
+  box-shadow: 0 0 8px #0f141a;
+  transform: scale(1.1);
+}
