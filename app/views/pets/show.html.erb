@@ -1,12 +1,29 @@
-<h2><%= @pet.title %></h2>
-    <div class="col-lg-6">
-      <img class="img-display-animal" src="https://images.unsplash.com/photo-1416138645715-930585fe4ce2?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" >
+<div class="pets-show-page">
+  <div class="header">
+    <h1><%= @pet.title %></h1>
+  </div>
+
+  <div class="col-lg-6">
+    <img class="img-display-animal" src="https://images.unsplash.com/photo-1416138645715-930585fe4ce2?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" >
+  </div>
+
+  <div class="content-wrapper">
+    <div class="main-content">
+      <div class="pet-subtitle">
+        <h2><%= @pet.pet_name %></h2>
+      </div>
+
+      <div class="pet-highlights">
+        <p><%= @pet.category %>  |  <%= @pet.species %>  |  <%= @pet.location %></p>
+      </div>
+        <p><%= @pet.description %></p>
     </div>
 
-<div class="pet-subtitle">
-  <h2><%= @pet.pet_name %></h2>
+    <div class="booking-form">
+        <h2>EXAMPLE Booking Form</h2>
+        <form action="#" method="post">
+          <!-- Weitere HTML-Elemente für das Buchungsformular -->
+        </form>
+    </div>
+  </div>
 </div>
-<div class="pet-highlights">
-  <p><%= @pet.category %> | <%= @pet.species %> | <%= @pet.location %></p>
-</div>
-  <p><%= @pet.description %></p>
