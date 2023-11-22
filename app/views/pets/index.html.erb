@@ -6,8 +6,14 @@
   <title>Document</title>
 </head>
 <body>
-  <h1>Hallo from INDEX</h1>
+  <h1>Rent a furry friend!</h1>
   <%= render "category" %>
-  <%= render "card" %>
+
+  <div class="cards-pet">
+    <% @pets.each do |pet| %>
+      <%= render "card", pet: pet %>
+    <% end %>
+  </div>
+
 </body>
 </html>
