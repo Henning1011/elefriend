@@ -1,0 +1,9 @@
+<div class="booking-form">
+<h1>Rent your friend</h1>
+<p><%= @pet.price %> €</p>
+<%= simple_form_for [@pet, @booking] do |f| %>
+  <%= f.input :date %>
+  <%= f.input :message %>
+  <%= f.submit "Submit", class: "btn btn-primary" %>
+<% end %>
+</div>
