@@ -2,6 +2,8 @@
   overflow: hidden;
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  height: 350px;
+  border-radius: 10px;
 }
 
 .card-pet > img {
@@ -50,4 +52,11 @@
   background-color: lightblue;
   box-shadow: 0 0 8px #0f141a;
   transform: scale(1.1);
+}
+
+.card-link {
+  color: black;
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
 }
