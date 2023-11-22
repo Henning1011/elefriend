@@ -1,9 +1,9 @@
 Rails.application.routes.draw do
   devise_for :users
   root to: "pets#index"
-  
-  # Add Routes:  
-  get "/pets/:id", to: "pets#show"
+
+  # Add Routes:
+  get "/pets/:id", to: "pets#show", as: :pet
   # resources :pets, only: [:index, :show]
 
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
