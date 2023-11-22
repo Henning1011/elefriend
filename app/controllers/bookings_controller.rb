@@ -2,22 +2,25 @@ class BookingsController < ApplicationController
   before_action :set_pet, only: %i[new create]
 
   def index
-  end
-
-  def new
-    @booking = Booking.new
+    @bookings = Booking.all
   end
 
   def create
-    @booking = @pet.bookings.new(booking_params)
-    if @booking.save
-      redirect_to bookings_path
-    else
-      render 'pets/show', status: :unprocessable_entity
-    end
+    # @booking = Booking.new(booking_params)
+    # @booking.pet = @pet
+    # # @booking = @pet.bookings.new(booking_params)
+    # raise
+    # if @booking.save
+    #   redirect_to dashboard_path
+    # else
+    #   render '/app/views/pets/show', status: :unprocessable_entity
+    # end
   end
 
-  def save
+  def accept
+  end
+
+  def reject
   end
 
   private
@@ -30,3 +33,21 @@ class BookingsController < ApplicationController
     params.require(:booking).permit(:date, :message)
   end
 end
+
+
+# def create
+#   @review = Review.new(review_params)
+#   @review.restaurant = @restaurant
+#   @review.save
+#   redirect_to restaurant_path(@restaurant)
+# end
+
+# private
+
+# def set_restaurant
+#   @restaurant = Restaurant.find(params[:restaurant_id])
+# end
+
+# def review_params
+#   params.require(:review).permit(:content)
+# end
