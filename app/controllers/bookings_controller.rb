@@ -1,20 +1,21 @@
 class BookingsController < ApplicationController
-  before_action :set_pet, only: %i[new create]
+  before_action :set_pet, only: %i[create]
 
   def index
     @bookings = Booking.all
   end
 
   def create
-    # @booking = Booking.new(booking_params)
-    # @booking.pet = @pet
-    # # @booking = @pet.bookings.new(booking_params)
-    # raise
-    # if @booking.save
-    #   redirect_to dashboard_path
-    # else
-    #   render '/app/views/pets/show', status: :unprocessable_entity
-    # end
+    @booking = Booking.new(booking_params)
+    @booking.pet = @pet
+    @booking.user = current_user
+    # @booking = @pet.bookings.new(booking_params)
+    if @booking.save
+      redirect_to dashboard_path
+    else
+      raise
+      render 'pets/show', status: :unprocessable_entity
+    end
   end
 
   def accept
