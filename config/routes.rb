@@ -4,6 +4,8 @@ Rails.application.routes.draw do
 
   # Add Routes:
   get "/dashboard", to: "bookings#index", as: :dashboard
+  patch "/bookings/:id/accept", to: "bookings#accept", as: :accept
+  patch "/bookings/:id/reject", to: "bookings#reject", as: :reject
 
   resources :pets do
     resources :bookings, only: [:create]

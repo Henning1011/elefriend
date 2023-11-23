@@ -1,4 +1,4 @@
-<h2><strong>Bookings</strong></h2>
+<h2 class="p-3"><strong>My Bookings</strong></h2>
 
 <%# Don't know if it's working all of the above %>
 <%# There's the "current_user" bookings but how to display the user who made the booking? %>
@@ -8,5 +8,15 @@
     <%=  %> <%= booking.date %>
     <br>
     <%= booking.message %></li>
+  <% end %>
+</ul>
+
+<h2 class="p-3"><strong>My Requests</strong></h2>
+
+<%# Don't know if it's working all of the above %>
+<%# There's the "current_user" bookings but how to display the user who made the booking? %>
+<ul class="list-group">
+  <% @bookings.each do |booking| %>
+    <%= render "request", booking: booking %>
   <% end %>
 </ul>
