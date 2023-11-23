@@ -1,0 +1,12 @@
+<h2><strong>Bookings</strong></h2>
+
+<%# Don't know if it's working all of the above %>
+<%# There's the "current_user" bookings but how to display the user who made the booking? %>
+<ul class="list-group">
+  <% current_user.bookings.each do |booking| %>
+    <li class="list-group-item">
+    <%=  %> <%= booking.date %>
+    <br>
+    <%= booking.message %></li>
+  <% end %>
+</ul>

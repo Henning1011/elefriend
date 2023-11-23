@@ -19,11 +19,10 @@
         <p><%= @pet.description %></p>
     </div>
 
-    <div class="booking-form">
-        <h2>EXAMPLE Booking Form</h2>
-        <form action="#" method="post">
-          <!-- Weitere HTML-Elemente für das Buchungsformular -->
-        </form>
+    <div class="rent-box">
+          <div class="booking-form">
+            <%= render "/bookings/booking-form" %>
+        </div>
     </div>
   </div>
 </div>
