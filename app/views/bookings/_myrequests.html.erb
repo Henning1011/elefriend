@@ -1,0 +1,25 @@
+<% if booking.user_id != current_user.id %>
+  <li class="list-group-item">
+    <div class="d-flex bd-highlight">
+
+      <div class="p-2 bd-highlight align-self-center">
+        <%= booking.date %>
+      </div>
+
+      <div class="p-2 bd-highlight align-self-center flex-grow-1">
+        <%= booking.message %>
+      </div>
+
+      <div class="btn-group">
+        <div class="p-2 bd-highlight align-self-center">
+          <%= link_to "Accept", accept_path(booking), data: {"turbo-method": :patch}, class: "btn btn-success dashboard-button" %>
+        </div>
+
+        <div class="p-2 bd-highlight align-self-center">
+          <%= link_to "Reject", reject_path(booking), data: {"turbo-method": :patch}, class: "btn btn-danger dashboard-button" %>
+        </div>
+      </div>
+
+    </div>
+  </li>
+<% end %>
