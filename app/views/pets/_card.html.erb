@@ -1,12 +1,12 @@
 <%= link_to pet_path(pet), class: "card-link" do %>
   <div class="card-pet">
-    <img src="https://images.unsplash.com/photo-1416138645715-930585fe4ce2?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" />
+    <img src="<%= pet.image %>", alt="<%= pet.pet_name %>" >
     <div class="card-pet-infos">
       <div>
         <h2><%= pet.title %></h2>
         <p><%= pet.pet_name %></p>
       </div>
-      <h2 class="card-pet-pricing"><%= pet.price %></h2>
+      <h2 class="card-pet-pricing"><%= '%.2f' % pet.price %> €</h2>
     </div>
   </div>
 <% end %>
