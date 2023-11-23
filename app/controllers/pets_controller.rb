@@ -1,11 +1,20 @@
 class PetsController < ApplicationController
   before_action :set_pet, only: %i[create]
-  
+
   def index
     if params[:category].present?
       @pets = Pet.where(category: params[:category])
     else
       @pets = Pet.all
+    end
+    if params[:query].present?
+      sql_subquery = <<~SQL
+        pets.title @@ :query
+        OR pets.description @@ :query
+        OR pets.species @@ :query
+        OR pets.pet_name @@ :query
+      SQL
+      @pets = @pets.where(sql_subquery, query: "%#{params[:query]}%")
     end
   end
 
