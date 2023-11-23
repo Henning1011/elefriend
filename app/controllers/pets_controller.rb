@@ -1,6 +1,4 @@
 class PetsController < ApplicationController
-  before_action :set_pet, only: %i[create]
-
   def index
     if params[:category].present?
       @pets = Pet.where(category: params[:category])
@@ -37,7 +35,8 @@ class PetsController < ApplicationController
     end
   end
 
-private
+  private
+
   def set_pet
     @pet = Pet.find(params[:id])
   end
