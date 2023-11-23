@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "stimulus-scroll-to": "^4.1.0"
+  }
+}

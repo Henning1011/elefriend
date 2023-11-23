@@ -43,7 +43,7 @@ Pet.create!([{
   species: "Sloth",
   location: "Hamburg",
   user_id: users[1].id,
-  image: "https://images.unsplash.com/photo-1571602642271-21cb1d8531f8?q=80&w=2787&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+  image: "https://cdn.pixabay.com/photo/2016/12/03/15/11/sloth-1879999_1280.jpg"
 },
 {
   pet_name: "Sensei Shellshock",
@@ -65,6 +65,6 @@ Pet.create!([{
   species: "Koala",
   location: "Cologne",
   user_id: users[1].id,
-  image: "https://images.unsplash.com/photo-1524125833033-bc59e523d3e5?q=80&w=2986&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+  image: "https://cdn.pixabay.com/photo/2020/07/21/12/55/koala-5426177_1280.jpg"
 },
 ])

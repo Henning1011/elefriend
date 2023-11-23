@@ -1,13 +1,16 @@
-<div class="pets-show-page">
-  <div class="header">
-    <h1><%= @pet.title %></h1>
-  </div>
+<div class="animal-hero-banner">
 
-  <div class="col-lg-6">
+  <div class="animal-banner">
     <img class="img-display-animal" src="<%= @pet.image %>", alt="<%= @pet.pet_name %>" >
-    <%# <img class="img-display-animal" src="https://images.unsplash.com/photo-1416138645715-930585fe4ce2?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" > %>
   </div>
 
+  <div class="header">
+    <h1 id="pet-title"><%= @pet.title %></h1>
+    <a class="rent-me-btn btn btn-primary" href="#rent-height" data-controller="scroll-to">Rent me</a>
+  </div>
+</div>
+
+<div class="pets-show-page">
   <div class="content-wrapper">
     <div class="main-content">
       <div class="pet-subtitle">
@@ -20,7 +23,7 @@
         <p><%= @pet.description %></p>
     </div>
 
-    <div class="rent-box">
+    <div class="rent-box" id="rent-height">
           <div class="booking-form">
             <%= render "/bookings/booking-form" %>
         </div>
