@@ -32,8 +32,3 @@ class BookingsController < ApplicationController
     params.require(:booking).permit(:date, :message)
   end
 end
-
-
-# def review_params
-#   params.require(:review).permit(:content)
-# end
