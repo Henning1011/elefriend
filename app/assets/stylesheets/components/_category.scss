@@ -16,6 +16,7 @@
 
 
 .category-icons li i {
+  color: darkgrey;
   transition: background-color 0.3s ease, transform 0.3s ease;
   display: inline-block;
   width: 50px;
@@ -30,4 +31,8 @@
   background-color: lightblue;
   box-shadow: 0 0 8px #0f141a;
   transform: scale(1.1);
+}
+
+.category-icons .active {
+  color: black;
 }

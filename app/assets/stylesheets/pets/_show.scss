@@ -1,3 +1,32 @@
-.img-display-animal {
-  width: 600px;
+.pets-show-page {
+  width: 80%;
+  margin: 0 auto;
+
+  .header {
+    padding: 20px;
+    text-align: left;
+  }
+
+  .img-display-animal {
+    width: 600px;
+  }
+
+.content-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 500px;
+}
+
+  .main-content {
+    display: grid;
+    padding: 20px;
+
+    .pet-highlights {
+      border-bottom: 2px solid #ddd;
+      padding-bottom: 5px;
+      margin-bottom: 20px;
+    }
+    .booking-form {
+      padding: 20px;
+    }
+  }
 }

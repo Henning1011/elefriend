@@ -28,7 +28,7 @@ Pet.create!([{
   title: "Pony for Parties",
   description: "Meet Starlight Sparkle, the enchanting Pony for Parties! Add a touch of magic to your celebrations with gentle pony rides and whimsical moments that create unforgettable memories.",
   price: 200,
-  category: "Experience",
+  category: "Party",
   species: "Pony",
   location: "Augsburg",
   user_id: users[2].id
@@ -38,7 +38,7 @@ Pet.create!([{
   title: "Sloth for a slow day",
   description: "Experience the ultimate relaxation with Tranquil Tardigrade, your 'Sloth for a Slow Day.' Let this easygoing companion turn your hectic day into a leisurely escape, bringing a sense of calm and joy with its unhurried charm.",
   price: 300,
-  category: "Experience",
+  category: "Relax",
   species: "Sloth",
   location: "Hamburg",
   user_id: users[1].id
@@ -48,9 +48,19 @@ Pet.create!([{
   title: "Rent a Ninja Turtle for Martial Arts Lessons",
   description: "Unlock your inner ninja with Sensei Shellshock! Rent this skilled Ninja Turtle for personalized martial arts lessons, blending discipline and fun to transform your training into a shell-shocking adventure.",
   price: 500,
-  category: "Experience",
+  category: "Sports",
   species: "Turtle",
-  location: "Berlim",
+  location: "Berlin",
   user_id: users[0].id
+},
+{
+  pet_name: "Kurt Koala",
+  title: "Chill on your couch with Kurt",
+  description: "Time to watch your favorite movie on a cloudy Sunday afternoon! Kurt the Koala is your best companion to do that.",
+  price: 220,
+  category: "Relax",
+  species: "Koala",
+  location: "Cologne",
+  user_id: users[1].id
 },
 ])

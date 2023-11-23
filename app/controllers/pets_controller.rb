@@ -1,6 +1,10 @@
 class PetsController < ApplicationController
   def index
-    @pets = Pet.all
+    if params[:category].present?
+      @pets = Pet.where(category: params[:category])
+    else
+      @pets = Pet.all
+    end
   end
 
   def show

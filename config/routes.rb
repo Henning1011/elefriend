@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   resources :pets do
     resources :bookings, only: [:create]
   end
+
   # resources :pets, only: [:index, :show]
 
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
