@@ -1,11 +1,7 @@
 <h2 class="p-3"><strong>My Bookings</strong></h2>
 <ul class="list-group">
   <% current_user.bookings.each do |booking| %>
-    <li class="list-group-item">
-    <%= booking.pet.title %> | <%= booking.pet.pet_name %> | <%= booking.pet.species %><br>
-    <%= booking.date %><br>
-    <%= booking.message %><br>
-    <%= booking.status %></li>
+    <%= render "mybookings", booking: booking %>
   <% end %>
 </ul>
 
@@ -15,6 +11,6 @@
 <%# There's the "current_user" bookings but how to display the user who made the booking? %>
 <ul class="list-group">
   <% @bookings.each do |booking| %>
-    <%= render "request", booking: booking %>
+    <%= render "myrequests", booking: booking %>
   <% end %>
 </ul>

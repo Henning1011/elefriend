@@ -1,0 +1,23 @@
+<li class="list-group-item">
+  <div class="d-flex bd-highlight">
+
+  <div class="p-2 bd-highlight align-self-center">
+        <%= booking.date %>
+      </div>
+
+      <div class="p-2 bd-highlight align-self-center flex-grow-1">
+        <%= booking.message %>
+      </div>
+
+      <div class="p-2 bd-highlight align-self-center">
+        <% if booking.status == "rejected" %>
+          <div class="btn btn-outline-danger dashboard-button status"><%= booking.status %></div>
+        <% elsif booking.status == "accepted" %>
+          <div class="btn btn-outline-success dashboard-button status"><%= booking.status %></div>
+        <% else %>
+          <div class="btn btn-outline-secondary dashboard-button status"><%= booking.status %></div>
+        <% end %>
+      </div>
+
+  </div>
+</li>
