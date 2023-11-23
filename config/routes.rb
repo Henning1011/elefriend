@@ -3,16 +3,11 @@ Rails.application.routes.draw do
   root to: "pets#index"
 
   # Add Routes:
-  get "/pets/:id", to: "pets#show", as: :pet
-
-
-  # Add Routes:
   get "/dashboard", to: "bookings#index", as: :dashboard
 
   resources :pets do
     resources :bookings, only: [:create]
   end
- 
 
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
