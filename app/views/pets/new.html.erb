@@ -1,10 +1,10 @@
   <div class="container">
     <h1>Create a new <strong>pet</strong> !</h1>
       <%= simple_form_for (@pet) do |f| %>
-        <h3><%= f.input :pet_name%></h3>
-        <h3><%= f.input :title%></h3>
-        <h3><%= f.input :description%></h3>
-        <h3><%= f.input :price%></h3>
+        <h3><%= f.input :pet_name %></h3>
+        <h3><%= f.input :title %></h3>
+        <h3><%= f.input :description %></h3>
+        <h3><%= f.input :price %></h3>
         <h3><%= f.input :category, collection: Pet::CATEGORY %></h3>
         <h3><%= f.input :species %></h3>
         <h3><%= f.input :location %></h3>
