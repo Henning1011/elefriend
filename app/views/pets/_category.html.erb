@@ -1,47 +1,56 @@
-<div>
-  <ul class="category-icons">
+<div class="container">
+  <div class="row">
+    <div class="d-flex justify-content-center">
+      <ul class="category-icons">
+        <li class="text-center">
+          <a href="?category=<%= params[:category] == 'Transport' ? '' : 'Transport' %>">
+            <i class="fa-solid fa-car-side <%= params[:category] == 'Transport' ? 'active' : '' %>"></i>
+          </a>
+          <div class="category-title">Transport</div>
+        </li>
 
-    <li>
-      <a href="?category=<%= params[:category] == "Transport" ? "" : "Transport" %>">
-        <i class="fa-solid fa-car-side <%= params[:category] == "Transport" ? "active" : "" %>"></i>
-      </a>
-    </li>
+        <li class="text-center">
+          <a href="?category=<%= params[:category] == 'Cuddle' ? '' : 'Cuddle' %>">
+            <i class="fa-solid fa-battery-half <%= params[:category] == 'Cuddle' ? 'active' : '' %>"></i>
+          </a>
+          <div class="category-title">Cuddle</div>
+        </li>
 
-    <li>
-      <a href="?category=<%= params[:category] == "Cuddle" ? "" : "Cuddle" %>">
-        <i class="fa-solid fa-battery-half <%= params[:category] == "Cuddle" ? "active" : "" %>"></i>
-      </a>
-    </li>
+        <li class="text-center">
+          <a href="?category=<%= params[:category] == 'Therapy' ? '' : 'Therapy' %>">
+            <i class="fa-solid fa-shield-dog <%= params[:category] == 'Therapy' ? 'active' : '' %>"></i>
+          </a>
+          <div class="category-title">Therapy</div>
+        </li>
 
-    <li>
-      <a href="?category=<%= params[:category] == "Therapy" ? "" : "Therapy" %>">
-        <i class="fa-solid fa-shield-dog <%= params[:category] == "Therapy" ? "active" : "" %>"></i>
-      </a>
-    </li>
+        <li class="text-center">
+          <a href="?category=<%= params[:category] == 'Adventure' ? '' : 'Adventure' %>">
+            <i class="fa-solid fa-cable-car <%= params[:category] == 'Adventure' ? 'active' : '' %>"></i>
+          </a>
+          <div class="category-title">Adventure</div>
+        </li>
 
-    <li>
-      <a href="?category=<%= params[:category] == "Adventure" ? "" : "Adventure" %>">
-        <i class="fa-solid fa-cable-car <%= params[:category] == "Adventure" ? "active" : "" %>"></i>
-      </a>
-    </li>
+        <li class="text-center">
+          <a href="?category=<%= params[:category] == 'Party' ? '' : 'Party' %>">
+            <i class="fa-solid fa-champagne-glasses <%= params[:category] == 'Party' ? 'active' : '' %>"></i>
+          </a>
+          <div class="category-title">Party</div>
+        </li>
 
-    <li>
-      <a href="?category=<%= params[:category] == "Party" ? "" : "Party" %>">
-        <i class="fa-solid fa-champagne-glasses <%= params[:category] == "Party" ? "active" : "" %>"></i>
-      </a>
-    </li>
+        <li class="text-center">
+          <a href="?category=<%= params[:category] == 'Relax' ? '' : 'Relax' %>">
+            <i class="fa-solid fa-otter <%= params[:category] == 'Relax' ? 'active' : '' %>"></i>
+          </a>
+           <div class="category-title">Relax</div>
+        </li>
 
-    <li>
-      <a href="?category=<%= params[:category] == "Relax" ? "" : "Relax" %>">
-        <i class="fa-solid fa-otter <%= params[:category] == "Relax" ? "active" : "" %>"></i>
-      </a>
-    </li>
-
-    <li>
-      <a href="?category=<%= params[:category] == "Sports" ? "" : "Sports" %>">
-        <i class="fa-solid fa-futbol <%= params[:category] == "Sports" ? "active" : "" %>"></i>
-      </a>
-    </li>
-
-  </ul>
+        <li class="text-center">
+          <a href="?category=<%= params[:category] == 'Sports' ? '' : 'Sports' %>">
+            <i class="fa-solid fa-basketball <%= params[:category] == 'Sports' ? 'active' : '' %>"></i>
+          </a>
+          <div class="category-title">Sports</div>
+        </li>
+      </ul>
+    </div>
+  </div>
 </div>
