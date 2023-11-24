@@ -9,3 +9,47 @@
 .status {
   pointer-events: none;
 }
+
+.rent-me-btn {
+  background-color: lightblue;
+  color: black;
+  border-radius: 4px;
+  border: none;
+  box-shadow: 0 0 2px #808080;
+  text-decoration: none;
+  padding: 8px 16px 8px 16px;
+  border-top: 0.25px solid #CCCCCC;
+  border-right: 0.25px solid #8e8e8e;
+  border-bottom: 0.25px solid #8e8e8e;
+  border-left: 0.25px solid #CCCCCC;
+  font-family:Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.rent-me-btn:hover {
+  background-color: rgb(255, 255, 255);
+  color: rgb(126, 204, 231);
+}
+
+.button-test {
+  background-color: lightblue;
+  color: black;
+  border-radius: 4px;
+  border: none;
+  box-shadow: 0 0 2px #808080;
+  text-decoration: none;
+  padding: 8px 16px 8px 16px;
+  border-top: 0.25px solid #CCCCCC;
+  border-right: 0.25px solid #8e8e8e;
+  border-bottom: 0.25px solid #8e8e8e;
+  border-left: 0.25px solid #CCCCCC;
+  font-family:Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.button-test:hover {
+  background-color: rgb(255, 255, 255);
+  color: rgb(126, 204, 231);
+}
