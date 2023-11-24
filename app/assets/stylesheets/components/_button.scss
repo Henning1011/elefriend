@@ -10,7 +10,7 @@
   pointer-events: none;
 }
 
-.lightblue-link-btn {
+.lightblue-link {
   background-color: lightblue;
   color: black;
   border-radius: 4px;
@@ -27,7 +27,7 @@
   font-weight: bold;
 }
 
-.lightblue-link-btn:hover {
+.lightblue-link:hover {
   background-color: rgb(255, 255, 255);
   color: rgb(126, 204, 231);
 }
@@ -49,7 +49,7 @@
   font-weight: bold;
 }
 
-.button-test:hover {
+.lightblue-btn:hover {
   background-color: rgb(255, 255, 255);
   color: rgb(126, 204, 231);
 }
