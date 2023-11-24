@@ -1,6 +1,6 @@
 <div class="booking-form">
   <h1>Rent your friend</h1>
-  <p><%= @pet.price %> €</p>
+  <p><%= '%.2f' % @pet.price %> €</p>
   <%= simple_form_for [@pet, @booking] do |f| %>
     <%= f.input :date,
               as: :string,
