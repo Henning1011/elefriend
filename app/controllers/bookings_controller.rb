@@ -25,11 +25,13 @@ class BookingsController < ApplicationController
   def accept
     @booking.status = "accepted"
     @booking.save
+    # redirect_to dashboard_path(anchor: "requests-tab-pane"), notice: "Request processed."
   end
 
   def reject
     @booking.status = "rejected"
     @booking.save
+    # redirect_to dashboard_path(anchor: "requests-tab-pane"), notice: "Request processed."
   end
 
   private
