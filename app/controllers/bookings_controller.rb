@@ -18,7 +18,7 @@ class BookingsController < ApplicationController
         render 'pets/show', status: :unprocessable_entity
       end
     else
-      redirect_to new_user_registration_path, alert: "You need to be logged in to create a booking."
+      redirect_to new_user_session_path, alert: "You need to be logged in to create a booking."
     end
   end
 

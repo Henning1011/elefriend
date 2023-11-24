@@ -1,16 +1,32 @@
-<h2 class="p-3"><strong>My Bookings</strong></h2>
-<ul class="list-group">
-  <% current_user.bookings.each do |booking| %>
-    <%= render "mybookings", booking: booking %>
-  <% end %>
+<ul class="nav nav-tabs" id="myTab" role="tablist">
+
+  <li class="nav-item" role="presentation">
+    <button class="nav-link text-body active" id="bookings-tab" data-bs-toggle="tab" data-bs-target="#bookings-tab-pane" type="button" role="tab" aria-controls="bookings-tab-pane" aria-selected="true">My Bookings</button>
+  </li>
+
+  <li class="nav-item" role="presentation">
+    <button class="nav-link text-body" id="requests-tab" data-bs-toggle="tab" data-bs-target="#requests-tab-pane" type="button" role="tab" aria-controls="requests-tab-pane" aria-selected="false">My Requests</button>
+  </li>
+
 </ul>
 
-<h2 class="p-3"><strong>My Requests</strong></h2>
 
-<%# Don't know if it's working all of the above %>
-<%# There's the "current_user" bookings but how to display the user who made the booking? %>
-<ul class="list-group">
-  <% @bookings.each do |booking| %>
-    <%= render "myrequests", booking: booking %>
-  <% end %>
-</ul>
+<div class="tab-content" id="myTabContent">
+
+  <div class="tab-pane fade show active" id="bookings-tab-pane" role="tabpanel" aria-labelledby="bookings-tab" tabindex="0">
+    <ul class="list-group">
+      <% current_user.bookings.each do |booking| %>
+        <%= render "mybookings", booking: booking %>
+      <% end %>
+    </ul>
+  </div>
+
+  <div class="tab-pane fade" id="requests-tab-pane" role="tabpanel" aria-labelledby="requests-tab" tabindex="0">
+    <ul class="list-group">
+      <% @bookings.each do |booking| %>
+        <%= render "myrequests", booking: booking %>
+      <% end %>
+    </ul>
+  </div>
+
+</div>
