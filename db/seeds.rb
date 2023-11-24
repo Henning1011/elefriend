@@ -23,7 +23,8 @@ users = User.create!([{
   password: "123456"
 },
 ])
-Pet.create!([{
+
+pet = Pet.new({
   pet_name: "Starlight Sparkle",
   title: "Pony for Parties",
   description: "Meet Starlight Sparkle, the enchanting Pony for Parties! Add a touch of magic to your celebrations with gentle pony rides and whimsical moments that create unforgettable memories.",
@@ -32,9 +33,12 @@ Pet.create!([{
   species: "Pony",
   location: "Augsburg",
   user_id: users[2].id,
-  image: "https://plus.unsplash.com/premium_photo-1681882142855-66005be79600?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-},
-{
+})
+file = URI.open("https://plus.unsplash.com/premium_photo-1681882142855-66005be79600?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")
+pet.photo.attach( io: file, filename: "1.jpg", content_type: "image/png")
+pet.save!
+
+pet = Pet.new({
   pet_name: "Tranquil Tardigrade",
   title: "Sloth for a slow day",
   description: "Experience the ultimate relaxation with Tranquil Tardigrade, your 'Sloth for a Slow Day.' Let this easygoing companion turn your hectic day into a leisurely escape, bringing a sense of calm and joy with its unhurried charm.",
@@ -43,9 +47,12 @@ Pet.create!([{
   species: "Sloth",
   location: "Hamburg",
   user_id: users[1].id,
-  image: "https://cdn.pixabay.com/photo/2016/12/03/15/11/sloth-1879999_1280.jpg"
-},
-{
+})
+file = URI.open("https://cdn-copkk.nitrocdn.com/YltYtAKgPcLedXEEgYFqpFzrZUtcEffn/assets/images/optimized/rev-4526253/www.aerlawgroup.com/wp-content/uploads/2020/10/sloth-tree-nature-animal-scaled.jpg")
+pet.photo.attach(io: file, filename: "2.jpg", content_type: "image/png")
+pet.save!
+
+pet = Pet.new({
   pet_name: "Sensei Shellshock",
   title: "Rent a Ninja Turtle for Martial Arts Lessons",
   description: "Unlock your inner ninja with Sensei Shellshock! Rent this skilled Ninja Turtle for personalized martial arts lessons, blending discipline and fun to transform your training into a shell-shocking adventure.",
@@ -54,8 +61,12 @@ Pet.create!([{
   species: "Turtle",
   location: "Berlin",
   user_id: users[0].id,
-  image: "https://images.unsplash.com/photo-1633606849129-4ead6b0fd70f?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-},
+})
+file = URI.open("https://images.unsplash.com/photo-1633606849129-4ead6b0fd70f?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")
+pet.photo.attach(io: file, filename: "3.jpg", content_type: "image/png")
+pet.save!
+
+pet = Pet.new(
 {
   pet_name: "Kurt Koala",
   title: "Chill on your couch with Kurt",
@@ -65,6 +76,7 @@ Pet.create!([{
   species: "Koala",
   location: "Cologne",
   user_id: users[1].id,
-  image: "https://cdn.pixabay.com/photo/2020/07/21/12/55/koala-5426177_1280.jpg"
-},
-])
+})
+file = URI.open("https://cdn.pixabay.com/photo/2020/07/21/12/55/koala-5426177_1280.jpg")
+pet.photo.attach(io: file, filename: "4.jpg", content_type: "image/png")
+pet.save!
