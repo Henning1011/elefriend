@@ -1,16 +1,21 @@
-  <div class="container">
-    <h1>Create a new <strong>pet</strong> !</h1>
+  <div class="pet-new-page justify center">
+  <div class="container text-center">
+    <div class="pet-box">
+    <h2> 🦥 Create an offer for your pet 🦧 </h2>
       <%= simple_form_for (@pet) do |f| %>
-        <h3><%= f.input :pet_name %></h3>
-        <h3><%= f.input :title %></h3>
-        <h3><%= f.input :description %></h3>
-        <h3><%= f.input :price %></h3>
-        <h3><%= f.input :image %></h3>
-        <h3><%= f.input :category, collection: Pet::CATEGORY %></h3>
-        <h3><%= f.input :species %></h3>
-        <h3><%= f.input :location %></h3>
+      <div class="form-group">
+        <p><%= f.input :pet_name, placeholder: "Enter your pet name", label: false, class: "form-inline" %></p>
+        <p><%= f.input :title, placeholder: "Enter title", label: false, class: "form-inline" %></p>
+        <p><%= f.input :description, placeholder: "Enter description", label: false, class: "form-inline" %></p>
+        <p><%= f.input :price, placeholder: "Enter price", label: false, class: "form-inline" %></p>
+        <p><%= f.input :photo, as: :file, label: false, class: "form-inline" %></p>
+        <p><%= f.input :category, collection: Pet::CATEGORY, prompt: "Select category", label: false, class: "form-inline" %></p>
+        <p><%= f.input :species, placeholder: "Enter species", label: false, class: "form-inline" %></p>
+        <p><%= f.input :location, placeholder: "Enter location", label: false, class: "form-inline" %></p>
         <%= f.submit "Submit", class: "btn btn-success" %>
       <% end %>
-      <br>
       <%= link_to "🔙", root_path, class: "btn btn-danger"%>
+      </div>
+    </div>
   </div>
+</div>

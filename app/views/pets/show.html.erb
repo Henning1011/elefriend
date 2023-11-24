@@ -1,7 +1,7 @@
 <div class="animal-hero-banner">
 
   <div class="animal-banner">
-    <img class="img-display-animal" src="<%= @pet.image %>", alt="<%= @pet.pet_name %>" >
+    <%= cl_image_tag @pet.photo.key, class:"img-display-animal", alt:@pet.pet_name%>
   </div>
 
   <div class="header">
