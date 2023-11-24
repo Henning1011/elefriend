@@ -10,8 +10,3 @@ eagerLoadControllersFrom("controllers", application)
 // import { lazyLoadControllersFrom } from "@hotwired/stimulus-loading"
 // lazyLoadControllersFrom("controllers", application)
 
-import { Application } from '@hotwired/stimulus'
-import ScrollTo from 'stimulus-scroll-to'
-
-const application = Application.start()
-application.register('scroll-to', ScrollTo)
