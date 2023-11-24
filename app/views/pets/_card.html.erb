@@ -3,7 +3,7 @@
     <%= cl_image_tag pet.photo.key, alt: pet.pet_name %>
     <div class="card-pet-infos">
       <div>
-        <h2><%= pet.title %></h2>
+        <h2 class="card-title"><%= pet.title %></h2>
         <p><%= pet.pet_name %></p>
       </div>
       <h2 class="card-pet-pricing"><%= '%.2f' % pet.price %> €</h2>

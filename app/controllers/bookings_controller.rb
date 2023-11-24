@@ -7,14 +7,18 @@ class BookingsController < ApplicationController
   end
 
   def create
-    @booking = Booking.new(booking_params)
-    @booking.pet = @pet
-    @booking.user = current_user
-    @booking.status = "pending"
-    if @booking.save
-      redirect_to dashboard_path
+    if user_signed_in?
+      @booking = Booking.new(booking_params)
+      @booking.pet = @pet
+      @booking.user = current_user
+      @booking.status = "pending"
+      if @booking.save
+        redirect_to dashboard_path
+      else
+        render 'pets/show', status: :unprocessable_entity
+      end
     else
-      render 'pets/show', status: :unprocessable_entity
+      redirect_to new_user_session_path, alert: "You need to be logged in to create a booking."
     end
   end
 
