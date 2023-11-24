@@ -2,7 +2,7 @@
   overflow: hidden;
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
-  height: 350px;
+  height: 340px;
   border-radius: 10px;
 }
 
@@ -14,8 +14,8 @@
 
 .card-pet h2 {
   font-size: 16px;
-  font-weight: bold;
   margin: 0;
+  height: 40px;
 }
 
 .card-pet p {
@@ -44,14 +44,14 @@
 .cards-pet {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  gap: 24px;
+  gap: 32px;
   padding: 24px;
 }
 
 .card-pet:hover {
   background-color: lightblue;
-  box-shadow: 0 0 8px #0f141a;
-  transform: scale(1.1);
+  transform: scale(1.05);
+  box-shadow: 0 0 4px #474a4e;
 }
 
 .card-link {
