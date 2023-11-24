@@ -101,3 +101,25 @@
 .response-msg {
   margin-bottom: 0;
 }
+
+.subtle-blue-btn-normal {
+  background-color: rgb(255, 255, 255);
+  color: rgb(126, 204, 231);
+  border-radius: 4px;
+  box-shadow: 0 0 2px #808080;
+  text-decoration: none;
+  padding:10px 16px 10px 16px;
+  border-top: 0.25px solid #CCCCCC;
+  border-right: 0.25px solid #8e8e8e;
+  border-bottom: 0.25px solid #8e8e8e;
+  border-left: 0.25px solid #CCCCCC;
+  font-size: 12px;
+  font-weight: bold;
+  font-family:Arial, Helvetica, sans-serif;
+  height: fit-content;
+}
+
+.subtle-blue-btn-normal:hover {
+  background-color: rgb(126, 204, 231);
+  color: rgb(255, 255, 255);
+}
