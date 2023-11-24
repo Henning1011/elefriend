@@ -1,11 +1,13 @@
-<div class="booking-form">
-  <h1>Rent your friend</h1>
-  <p><%= '%.2f' % @pet.price %> €</p>
+<div class="booking-form text-center">
+  <h2>Rent your friend</h2>
+  <h4><%= '%.2f' % @pet.price %> €</h4>
   <%= simple_form_for [@pet, @booking] do |f| %>
     <%= f.input :date,
               as: :string,
-              input_html: { data: { controller: "datepicker" } }  %>
-    <%= f.input :message %>
+              input_html: { data: { controller: "datepicker" } },
+              placeholder: "Pick a date",
+              label: false  %>
+    <%= f.input :message, placeholder: "Enter your message to user", label: false %>
     <%= f.submit "SUBMIT", class: "lightblue-btn" %>
   <% end %>
 </div>

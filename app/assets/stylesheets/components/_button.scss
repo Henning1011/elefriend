@@ -88,4 +88,15 @@
 .subtle-blue-btn:hover {
   background-color: rgb(126, 204, 231);
   color: rgb(255, 255, 255);
+
+.accept {
+  background-color: lightgreen;
+}
+
+.reject {
+  background-color: lightcoral;
+}
+
+.response-msg {
+  margin-bottom: 0;
 }
